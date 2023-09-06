@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Shameless Consulting</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background: linear-gradient(to bottom, #FFD6E6, #FFB6C1);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+        .container h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        .container p {
+            font-size: 18px;
+            color: #555;
+        }
+        .container button {
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .modal-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Congratulations on Your Job Offer!</h1>
+        <p>Attached below, our CTO will share with you more information related to your next tasks.</p>
+        <button onclick="showModal()">Accept Offer</button>
+        
+        <!-- Embed Video -->
+        <iframe src="vivian.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>Congratulations!</h2>
+            <p>You've accepted the job offer. Welcome to the team!</p>
+            <button class="modal-button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
