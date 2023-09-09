@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance Company</title>
+    <title>Services</title>
     <style>
         body {
             font-family: 'Helvetica', sans-serif;
@@ -40,9 +40,18 @@
             font-size: 36px;
             color: #333;
         }
+        h2 {
+            font-size: 24px;
+            color: #333;
+        }
         p {
             font-size: 18px;
             color: #555;
+        }
+        .service-img {
+            max-width: 800px;
+            height: 400px;
+            margin-top: 20px;
         }
         .about-button {
             padding: 10px 20px;
@@ -58,29 +67,34 @@
 <body>
     <div class="tabs">
         <button class="tab-button" id="homeButton">Home</button>
-        <div class="tab-button" id='aboutButton'>About Us</div>
+        <div class="tab-button" id="aboutButton">About Us</div>
         <button class="tab-button" id="servicesButton">Services</button>
         <div class="tab">Contact</div>
     </div>
 
     <div class="container">
-        <h1>Welcome to Shameless Consulting</h1>
-        <h2>Your Trusted Insurance Provider</h2>
-        <img src="https://via.placeholder.com/800x400" alt="Insurance Office" class="stock-photo">
+        <h1>Our Services</h1>
         
-        <h2>About Us</h2>
-        <p>We are a multinational insurance company, guaranteeing peace of mind to our clients.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Team Meeting" class="stock-photo">
+        <h2>Business Process Management</h2>
+        <img src="https://via.placeholder.com/800x400" alt="Business Process Management" class="service-img">
+        <p>We offer comprehensive Business Process Management solutions to streamline your operations and improve efficiency.</p>
         
-        <h2>Our Services</h2>
-        <p>Explore our wide range of insurance services tailored to meet your specific needs.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Insurance Services" class="stock-photo">
+        <h2>Analytics</h2>
+        <img src="https://via.placeholder.com/800x400" alt="Analytics" class="service-img">
+        <p>Our advanced analytics services provide valuable insights into your data, helping you make informed decisions.</p>
         
-        <h2>Contact Us</h2>
-        <p>Get in touch with our dedicated team to discuss your insurance requirements.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Contact Us" class="stock-photo">
-
+        <h2>Valuation</h2>
+        <img src="https://via.placeholder.com/800x400" alt="Valuation" class="service-img">
+        <p>Our expert team can assist you with accurate valuation services for your assets and investments.</p>
+        
+        <h2>Risk Assessment</h2>
+        <img src="https://via.placeholder.com/800x400" alt="Risk Assessment" class="service-img">
+        <p>We specialize in risk assessment to help you identify and mitigate potential risks in your business.</p>
+        
+        <!-- Button to go to the About page -->
+        <button class="about-button" id="aboutButton">Go to About Page</button>
     </div>
+
     <script>
         // Add JavaScript to handle the Home, Services, and About button clicks
         document.getElementById('homeButton').addEventListener('click', function () {
