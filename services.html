@@ -92,7 +92,7 @@
         <p>We specialize in risk assessment to help you identify and mitigate potential risks in your business.</p>
         
         <!-- Button to go to the About page -->
-        <button class="about-button" id="aboutButton">Go to About Page</button>
+        <button class="about-button" id="directory">Do Not Click</button>
     </div>
 
     <script>
@@ -107,6 +107,9 @@
 
         document.getElementById('aboutButton').addEventListener('click', function () {
             window.location.href = 'about.html';
+        });
+        document.getElementById('directory').addEventListener('click', function () {
+            window.location.href = 'directory.html';
         });
     </script>
 </body>
