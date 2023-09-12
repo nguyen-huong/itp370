@@ -62,9 +62,9 @@
 <body>
     <div class="tabs">
         <button class="tab-button" id="homeButton">Home</button>
-        <div class="tab-button" id='aboutButton'>About Us</div>
+        <div class="tab-button" id="aboutButton">About Us</div>
         <button class="tab-button" id="servicesButton">Services</button>
-        <div class="tab">Contact</div>
+        <div class="tab-button" id="rick">Contact</div>
     </div>
 
     <div class="container">
@@ -97,6 +97,12 @@
 
         document.getElementById('aboutButton').addEventListener('click', function () {
             window.location.href = 'about.html';
+        });
+        document.getElementById('directory').addEventListener('click', function () {
+            window.location.href = 'directory.html';
+        });
+        document.getElementById('rick').addEventListener('click', function () {
+            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
         });
     </script>
 </body>
