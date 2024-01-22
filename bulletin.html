@@ -136,7 +136,7 @@
     </div>
 
     <script>
-        // Add JavaScript to handle the Home, Services, and About button clicks
+
         document.getElementById('homeButton').addEventListener('click', function () {
             window.location.href = 'landing.html';
         });
@@ -158,7 +158,7 @@
 
         const bulletins = [
             {
-                title: "Some Hints",
+                title: "Vulnerability Report",
                 content: "Vulnerability report by our very own Steve"
             },
             {
@@ -170,9 +170,19 @@
 
         function displayBulletins() {
             const bulletinBoard = document.getElementById('bulletinBoard');
-            bulletinBoard.innerHTML = '';
+            bulletinBoard.innerHTML = ''; // Clear existing bulletins
             bulletins.forEach(bulletin => {
                 const bulletinDiv = document.createElement('div');
                 bulletinDiv.className = 'bulletin';
                 bulletinDiv.innerHTML = `
-                    <div class="bulletin-title
+                    <div class="bulletin-title">${bulletin.title}</div>
+                    <div class="bulletin-content">${bulletin.content}</div>
+                `;
+                bulletinBoard.appendChild(bulletinDiv);
+            });
+        }
+
+        displayBulletins();
+    </script>
+</body>
+</html>
