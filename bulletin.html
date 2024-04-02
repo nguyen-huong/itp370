@@ -99,75 +99,62 @@
         <div class="tab-button" id="rick">Contact</div>
     </div>
 
+    <!-- Bulletin Board Section -->
+    <div class="bulletin-board" id="bulletinBoard"></div>
 
+<script>
+    document.getElementById('homeButton').addEventListener('click', function () {
+        window.location.href = 'landing.html';
+    });
 
-        <!-- Bulletin Board Section -->
-        <div class="bulletin-board" id="bulletinBoard">
+    document.getElementById('servicesButton').addEventListener('click', function () {
+        window.location.href = 'services.html';
+    });
 
-        </div>
+    document.getElementById('aboutButton').addEventListener('click', function () {
+        window.location.href = 'about.html';
+    });
+    // Removed the directory event listener here
+    document.getElementById('rick').addEventListener('click', function () {
+        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    });
 
-
-    <script>
-
-        document.getElementById('homeButton').addEventListener('click', function () {
-            window.location.href = 'landing.html';
-        });
-
-        document.getElementById('servicesButton').addEventListener('click', function () {
-            window.location.href = 'services.html';
-        });
-
-        document.getElementById('aboutButton').addEventListener('click', function () {
-            window.location.href = 'about.html';
-        });
-        document.getElementById('directory').addEventListener('click', function () {
-            window.location.href = 'directory.html';
-        });
-        document.getElementById('rick').addEventListener('click', function () {
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-        });
-
-
-        const bulletins = [
-            {
-                title: "Vulnerability Report",
-                content: "Vulnerability report by our very own Steve"
-            },
-            {
-                title: "New Feature: ShamBell Pro",
-                content: "We are excited to announce ShamBell Pro, an advanced version of our security camera with facial recognition!"
-            },
-            {
-                title: "March 29",
-                content: "Consultants, HELP!  It's Ashley here and today I found this outside of Steve's Office today...I can't find Leroy or Steve anywhere in the office.  Have any of you had any contact with either of them?!  I haven't received replies from any of the emails or paper airplanes I sent them both!!!"
-            },
-            {
-                title: "March 30",
-                content: "Yo it's Steve! HELP! The server door was closed behind me and is locked from the outside!  Who would lock me in??? I bet it was Leroy.... I can't get out!  It's so dark and all I have is my phone flashlight.  Consultants, can you please open the door?!"
-            },
-            {
-                title: "April 1",
-                content: "Hi it’s Vivian, I heard banging on the door of the server room and was baffled to find Steve had been locked inside???  I was able to get him out of the room, but why did he get locked inside?  However closed the door on Steve, that was not a very funny April Fools joke -_-
-"
-            }
-        ];
-
-
-        function displayBulletins() {
-            const bulletinBoard = document.getElementById('bulletinBoard');
-            bulletinBoard.innerHTML = ''; // Clear existing bulletins
-            bulletins.forEach(bulletin => {
-                const bulletinDiv = document.createElement('div');
-                bulletinDiv.className = 'bulletin';
-                bulletinDiv.innerHTML = `
-                    <div class="bulletin-title">${bulletin.title}</div>
-                    <div class="bulletin-content">${bulletin.content}</div>
-                `;
-                bulletinBoard.appendChild(bulletinDiv);
-            });
+    const bulletins = [
+        {
+            title: "Vulnerability Report",
+            content: "Vulnerability report by our very own Steve"
+        },
+        {
+            title: "New Feature: ShamBell Pro",
+            content: "We are excited to announce ShamBell Pro, an advanced version of our security camera with facial recognition!"
+        },
+        {
+            title: "March 29",
+            content: "Consultants, HELP! It's Ashley here and today I found this outside of Steve's Office today...I can't find Leroy or Steve anywhere in the office. Have any of you had any contact with either of them?! I haven't received replies from any of the emails or paper airplanes I sent them both!!!"
+        },
+        {
+            title: "March 30",
+            content: "Yo it's Steve! HELP! The server door was closed behind me and is locked from the outside! Who would lock me in??? I bet it was Leroy.... I can't get out! It's so dark and all I have is my phone flashlight. Consultants, can you please open the door?!"
+        },
+        {
+            title: "April 1",
+            content: "Hi it’s Vivian, I heard banging on the door of the server room and was baffled to find Steve had been locked inside??? I was able to get him out of the room, but why did he get locked inside? However closed the door on Steve, that was not a very funny April Fools joke -_-"
         }
+    ];
 
-        displayBulletins();
-    </script>
-</body>
-</html>
+    function displayBulletins() {
+        const bulletinBoard = document.getElementById('bulletinBoard');
+        bulletinBoard.innerHTML = ''; // Clear existing bulletins
+        bulletins.forEach(bulletin => {
+            const bulletinDiv = document.createElement('div');
+            bulletinDiv.className = 'bulletin';
+            bulletinDiv.innerHTML = `
+                <div class="bulletin-title">${bulletin.title}</div>
+                <div class="bulletin-content">${bulletin.content}</div>
+            `;
+            bulletinBoard.appendChild(bulletinDiv);
+        });
+    }
+
+    displayBulletins();
+</script>
