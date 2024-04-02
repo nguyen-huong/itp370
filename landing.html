@@ -62,10 +62,10 @@
 <body>
     <div class="tabs">
         <button class="tab-button" id="homeButton">Home</button>
-        <div class="tab-button" id="aboutButton">About Us</div>
+        <button class="tab-button" id="aboutButton">About Us</button>
         <button class="tab-button" id="servicesButton">Services</button>
-        <div class="tab-button" id="rick">Contact</div>
-        <div class="tab-button" id="bulletin">Announcements</div>
+        <button class="tab-button" id="rick">Contact</button>
+        <button class="tab-button" id="bulletin">Announcements</button>
     </div>
 
     <div class="container">
@@ -87,10 +87,8 @@
         <h2>Contact Us</h2>
         <p>Get in touch with our dedicated team to discuss your insurance requirements.</p>
         <img src="./img/contact_us.png" alt="Contact Us" class="stock-photo">
-
     </div>
     <script>
-        // Add JavaScript to handle the Home, Services, and About button clicks
         document.getElementById('homeButton').addEventListener('click', function () {
             window.location.href = 'landing.html';
         });
@@ -102,12 +100,11 @@
         document.getElementById('aboutButton').addEventListener('click', function () {
             window.location.href = 'about.html';
         });
-        document.getElementById('directory').addEventListener('click', function () {
-            window.location.href = 'directory.html';
-        });
+
         document.getElementById('rick').addEventListener('click', function () {
             window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
         });
+
         document.getElementById('bulletin').addEventListener('click', function () {
             window.location.href = 'bulletin.html';
         });
