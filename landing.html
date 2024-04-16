@@ -62,9 +62,10 @@
 <body>
     <div class="tabs">
         <button class="tab-button" id="homeButton">Home</button>
-        <div class="tab-button" id="aboutButton">About Us</div>
+        <button class="tab-button" id="aboutButton">About Us</button>
         <button class="tab-button" id="servicesButton">Services</button>
-        <div class="tab-button" id="rick">Contact</div>
+        <button class="tab-button" id="rick">Contact</button>
+        <button class="tab-button" id="bulletin">Announcements</button>
     </div>
 
     <div class="container">
@@ -72,10 +73,13 @@
         <h2>Your Trusted Insurance Provider</h2>
         <img src="./img/trusted_insurance_provider.png" alt="Insurance Office" class="stock-photo">
         
-        <h2>About Us</h2>
-        <p>Our mission is to provide comprehensive and affordable cyber insurance coverage to small businesses. We aim to help our clients manage the risks of cyber threats and recover from unexpected incidents by providing top-quality service. We work closely with our clients to provide tailored solutions to their needs.</p>
+        <h2>Mission</h2>
+        <p>Shameless is where we make money by selling security solutions. We offer cyber insurance services and doorbells. We prioritize financial success and we also aim to deliver value by addressing your concerns about cyber threats and home security. Most importantly, we aim to not get fined in the 2024 fiscal year.</p>
         <img src="./img/about_us.png" alt="Team Meeting" class="stock-photo">
-        
+
+        <h2>Vision</h2>
+        <p>At Shameless, we provide security services in some countries so we can make people’s lives better. Our goal is to be a leading provider of security soultuions. We see ourselves as pioneers in delivering cyber insurance and doorbells while prioritizing profit! Join us for a future where everything is better!</p>
+    
         <h2>Our Services</h2>
         <p>Explore our wide range of insurance services tailored to meet your specific needs.</p>
         <img src="./img/bell.png" alt="Insurance Services" class="stock-photo">
@@ -83,10 +87,8 @@
         <h2>Contact Us</h2>
         <p>Get in touch with our dedicated team to discuss your insurance requirements.</p>
         <img src="./img/contact_us.png" alt="Contact Us" class="stock-photo">
-
     </div>
     <script>
-        // Add JavaScript to handle the Home, Services, and About button clicks
         document.getElementById('homeButton').addEventListener('click', function () {
             window.location.href = 'landing.html';
         });
@@ -98,11 +100,13 @@
         document.getElementById('aboutButton').addEventListener('click', function () {
             window.location.href = 'about.html';
         });
-        document.getElementById('directory').addEventListener('click', function () {
-            window.location.href = 'directory.html';
-        });
+
         document.getElementById('rick').addEventListener('click', function () {
             window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+        });
+
+        document.getElementById('bulletin').addEventListener('click', function () {
+            window.location.href = 'bulletin.html';
         });
     </script>
 </body>
